@@ -1,0 +1,235 @@
+---
+title: "spatial_autocorrelation"
+author: "Aimara Planillo"
+date: '2022-10-04'
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Analysis of spatial autocorrelation in roadkill data
+
+```{r packages}
+library(tidyverse)
+library(sf)
+library(tmap)
+library(dplyr)
+library(purrr)
+library(spatial)
+library(spdep)
+library(ggplot2)
+library(MASS)
+library(nlme)
+library(ggeffects)
+library(glmmTMB)
+```
+
+# Load and prepare data
+```{r}
+data_roadkills <- read_csv(paste0("data/GLM/table_glm_10.csv")) %>%
+  mutate(road_importance = factor(road_importance, levels = c("minor_road", "major_road")),
+         woodland2 = woodland^2,
+         distance_amenity_km2 = distance_amenity_km^2)
+
+str(data_roadkills)
+head(data_roadkills)
+
+## make spatial: all middle points of road segments
+roadkills_sf <- st_as_sf(data_roadkills, coords = c("long_midpoint", "lat_midpoint"),
+                         crs = 4326)
+
+# Explore number of carcasses
+tmap_mode("view")
+tm_shape(roadkills_sf) +
+  # tm_dots("red") + # this plots just the middle point of the road segments
+  tm_dots("nbr_carcasses")
+```
+
+
+
+# 1- Spatial autocorrelation (SAC)
+
+Variogram and correlogram from package "spatial"
+For this we create a "trend surface" from spatial data and response variable.
+We use nint = number of bins or intervals to use for checking for the correlation; they need to have 6 pairs of points or more.
+To run Moran's I we use package "spdep"
+This library uses the coordinates in a matrix and a "weights list" objects, class lw,
+obtained from a "neighbour" object, class nb, with the function nb2listw
+The neighbour object is a list of all localities. Each element is a vector of integers
+that represents the identity of the localities that share borders with the target locality
+(information about the neighbours of each point).
+We use 4 neighbours for this (k = 4).
+
+## Check for SAC in point data
+
+```{r}
+## project the coordinates to have the distances in meters
+roadkills_sf_proj <- st_transform(roadkills_sf, crs = 32636)
+
+tm_shape(roadkills_sf_proj) +
+  tm_dots("nbr_carcasses")
+```
+
+```{r}
+## compute moran test
+moran_roadills_df <- roadkills_sf_proj %>%
+  mutate(x_coord = st_coordinates(roadkills_sf_proj)[,1],
+         y_coord = st_coordinates(roadkills_sf_proj)[,2]) %>% 
+  st_drop_geometry() %>% 
+  dplyr::select(x_coord,y_coord,nbr_carcasses) 
+
+mycoord <- matrix(cbind(moran_roadills_df$x_coord,moran_roadills_df$y_coord), ncol=2)
+mycoord.nb <- knn2nb(knearneigh(mycoord, k = 4))
+mycoord.lw <- nb2listw(mycoord.nb, style="W")
+plot(mycoord.nb,mycoord) # Represents each point linked to the nearest 4 neighbours 
+
+roadkills_moran <- moran.test(moran_roadills_df$nbr_carcasses, mycoord.lw)
+
+roadkills_moran$estimate
+roadkills_moran$p.value
+# moran test is significant: spatial autocorrelation!
+
+## plot correlogram
+dts2 <- list()
+surface2 <- list()
+
+dts2 <- data.frame(x = moran_roadills_df$x_coord, 
+                   y = moran_roadills_df$y_coord, 
+                   z = moran_roadills_df$nbr_carcasses)
+surface2 <- surf.ls(2, dts2)
+png("Correlogram_roadkill_segments.png", width = 600, height = 550)
+correlogram(krig = surface2, nint = 100, plotit=TRUE, xlim=c(0,20000),
+            xlab="distance (m)", ylab="Moran's I",
+            cex.lab=1.2, cex.axis=1.2, cex.main = 1.2,
+            main = "Correlogram - roadkill data segments")
+abline(v= 5000, col = "blue", lty = 4)
+dev.off()
+```
+
+There is correlation until 5 km
+
+```{r}
+surface2 <- list()
+dts2 <- data.frame(x = moran_roadills_df$x_coord, 
+                   y = moran_roadills_df$y_coord, 
+                   z = moran_roadills_df$nbr_carcasses)
+surface2 <- surf.ls(2, dts2)
+x <- correlogram(krig = surface2, nint = 100, plotit = F, xlim=c(0,20000), 
+            xlab="distance (m)", ylab="Moran's I",
+            cex.lab=1.2, cex.axis=1.2, cex.main = 1.2, 
+            main = "Correlogram - roadkill data segments")
+data_plot_correlogram <- data.frame(x = x$x/1000,
+                                    y = x$y)
+
+range(data_plot_correlogram$y[18:97])
+
+ggplot(data = data_plot_correlogram, aes(x = x, y = y)) +
+  geom_point() + #shape = 1) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 5, linetype = "dotted", color = "blue") +
+  xlim(c(0, 20)) +
+  ylim(c(-1, 1)) +
+  theme_classic() +
+  labs(x = "distance (km)", y = "Moran's I")
+
+ggsave("figure S2 (correlogram).png", width = 14, height = 10, units = "cm")
+```
+
+
+# 2- Select spatial structure
+
+We are going to "cheat" and use null models with gls to do this because the full model is more difficult to evaluate
+
+```{r}
+## prepare data with projected coordinates
+nrow(data_roadkills)
+nrow(moran_roadills_df)
+
+roadkills_df <- data_roadkills %>% 
+  mutate(x_coord = st_coordinates(roadkills_sf_proj)[,1],
+         y_coord = st_coordinates(roadkills_sf_proj)[,2]) %>% 
+  mutate(group = 1)
+  
+head(roadkills_df)
+str(roadkills_df)
+```
+
+
+```{r}
+mod_formula <- formula("nbr_carcasses ~ 1")
+
+# no spatial structure
+fm0 <- gls(mod_formula, 
+           data = roadkills_df,
+           # correlation = corGaus(form=~x_coord+y_coord, nugget = T)
+           )
+
+# continous autoregressive process
+fm_CAR <- gls(mod_formula, 
+              data = roadkills_df,
+              correlation = corCAR1(form=~x_coord+y_coord))
+
+# gaussian spatial structure
+fm_Gaus <- gls(mod_formula, 
+           data = roadkills_df,
+           correlation = corGaus(form=~x_coord+y_coord, nugget = T))
+
+# linear spatial correlation 
+fm_Lin <- gls(mod_formula, 
+           data = roadkills_df,
+           correlation = corLin(form=~x_coord+y_coord))
+
+
+## compare all the spatial structures
+anova(fm0, fm_CAR, fm_Gaus, fm_Lin)
+# best AIC and logLik: fm_CAR
+```
+
+
+# 3- Run new model with spatial structure
+```{r}
+# previous model
+mod1 <- glm.nb(nbr_carcasses ~ road_importance + distance_amenity_km + 
+                 distance_water_km + woodland, 
+    data = roadkills_df)
+summary(mod1)
+plot(mod1)
+plot(ggpredict(mod1))
+
+
+# new model
+## without sac
+model.0 <- glmmPQL(nbr_carcasses ~ road_importance + distance_amenity_km + 
+                 distance_water_km + woodland,
+                 random = ~1|group,
+                   data=roadkills_df,
+                   family = nbinom1)
+summary(model.0)
+plot(model.0)
+
+## with sac
+model.1 <- glmmPQL(nbr_carcasses ~ road_importance + distance_amenity_km + 
+                            distance_water_km + woodland,
+                   random = ~1|group,
+                   data = roadkills_df,
+                   correlation = corCAR1(form=~x_coord+y_coord),
+                   family = nbinom1)
+summary(model.1)
+plot(model.1)
+
+save(model.1, file = "data-processed/data_GLM/ngb_model_CAR.RData")
+
+plot(Variogram(model.0), main = "No Correlation")
+plot(Variogram(model.1), main = "continous autoregressive process")
+```
+
+```{r}
+load("data-processed/data_GLM/ngb_model_CAR.RData")
+summary(model.1)
+
+```
+

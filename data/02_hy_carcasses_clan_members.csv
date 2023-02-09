@@ -1,0 +1,14 @@
+﻿ID;initial_ID;ID_clan;long;lat;date_death;sex;age_category;standardized_rank;rank_category;clan;collision_certainty_score_NEW;GPS_certainty_score;den_long;den_lat;den_long_1;den_lat_2;den_comment
+Hy_080;P518;P518;34.85553;-2.45566;24/01/2019;F;adult;1;high;P;1;1;NA;NA;;;no records for 2019
+Hy_061;Z164;P619;34.84782;-2.53079;02/06/2015;F;adult;0.13;mid;P;1;1;696378;9731342;;;
+Hy_071;Z178;I744;34.820669;-2.42949;07/07/2016;F;subadult;-0.14;mid;I;1;0.75;NA;NA;;;
+Hy_052;Z147;I383;34.89243;-2.61613;12/02/2013;F;adult;0.26;mid;I;1;1;710352;9727692;;;
+Hy_048;Z142;I593;34.854152;-2.43424;17/09/2011;F;subadult;-0.29;mid;I;0.75;0.5;708643;9727427;708726;9727641;one ot these two (until four days before death)
+Hy_047;Z141;P159;34.8072;-2.4126;20/04/2011;F;adult;0.38;high;P;1;0.5;697640;9730619;;;
+Hy_083;Z196;I484;34.90396;-2.47075;16/02/2020;F;adult;0.42;high;I;1;1;NA;NA;;;no records for 2020
+Hy_084;Z193;I705;34.90396;-2.47075;16/02/2020;F;adult;0.47;high;I;1;1;NA;NA;;;no records for 2020
+Hy_056;Z156;M661;34.92469;-2.6858;20/01/2014;F;adult;0.7;high;M;1;1;697280;9726969;;;start date is recorded to be 4 days later than death
+Hy_100;Z221;I925;34.890595;-2.464001;25/09/2022;F;subadult;-0.67;low;I;1;1;;;;;
+Hy_032;Z112;M416;34.80254;-2.429652;07/08/2002;M;subadult;0.89;NA;M;1;1;NA;NA;;;no records for 2002
+Hy_059;Z160;P604;34.80485;-2.4098;08/02/2015;M;adult;NA;NA;P;1;1;;;;;
+Hy_068;Z175;M807;34.83759;-2.48671;07/06/2016;M;subdadult;-0.59;NA;M;1;1;NA;NA;;;
