@@ -180,6 +180,9 @@ write_csv(table_glm_7, "data/GLM/table_glm_7.csv")
 # STEP 8: Extract land cover percentages --------------------------------------
 
 table_glm_7 <- read_csv("data/GLM/table_glm_7.csv")
+
+# The land cover file is too heavy for GitHub. It is available on requiest from 
+# the main author from the original study: https://doi.org/10.1111/j.1365-2699.2008.02017.x
 land_cover <- raster("data/spatial/serengeti_land_cover_Reed_2009.tif")
 
 
