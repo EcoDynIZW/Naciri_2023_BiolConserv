@@ -1,105 +1,105 @@
-﻿ID_OG;ID;date_obs;long;lat;exact;sex;age;collision_certainty_score;location_certainty_score;Comment
-Ccr_001;Hy_001;19890212;34.8216;-2.4373;no;M;subadult;1;0.25;Seronera
-Z058;Hy_002;19890326;0;0;NA;F;adult;0.75;0;NA
-Z045;Hy_003;19921224;0;0;NA;X;unknown;0.75;0;NA
-Z002;Hy_004;19930306;34.964708;-2.221979;no;M;unknown;0.75;0.25;road from Lobo to Seronera
-Z003;Hy_005;19930308;34.90033;-2.634167;no;M;subadult;0.75;1;near simba kopjes-main road
-Z046;Hy_006;19930314;0;0;NA;X;unknown;1;0;NA
-no_name_1;Hy_007;19930402;0;0;NA;X;unknown;1;0;NA
-Z006;Hy_008;19930626;35.1429;-2.0105;no;X;adult;1;0.5;Approx 2 km south of Lobo Lodge on main road
-Z047;Hy_009;19930717;0;0;NA;X;unknown;0.75;0;NA
-Z048;Hy_010;19930719;0;0;NA;X;unknown;0.75;0;NA
-Z007;Hy_011;19930826;34.81;-2.387333;no;X;adult;1;1;1.2 km after junction to Mwanza
-Z052;Hy_012;19930927;0;0;NA;X;unknown;0.75;0;NA
-Z008;Hy_013;19931018;34.77634;-2.708961;no;F;adult;1;0.75;8.1 km after Sopa lodge junction on road to Moru Kopjes
-Z012;Hy_014;19940109; 34.90433;-2.6525;no;F;adult;1;1;Main road junction to Sopa lodge. About 1.5km [North] of simba kopjes
-Z015;Hy_015;19940506;34.85433;-2.482333;no;F;adult;0.75;1;along Wandamu river
-Z019;Hy_016;19941031;34.8218;-2.4349;no;F;adult;1;0.95;the rangers found the carcass at the entry of the footpath to the school opposite to the football field Seronera village
-Z053;Hy_017;19950228;34.8833333;-2.596667;no;M;adult;1;1;Partridge car comes to my house around 10.30 am to tell me of a hyaena which Sarah Durant and a film crew saw lying by road at 6am. They report 13.9 km from hippo pool south of Seronera. I clock on Mercedes 12.2 km
-Z023;Hy_018;19950403;34.9975;-2.832167;no;F;adult;1;1;near Naabi
-no_name_2;Hy_019;19950415;34.84374;-2.33158;no;X;adult;1;0.75;12km north of northern dam on Seronera on main road from Seronera to Lobo
-Z027;Hy_020;19960310;34.87933;-2.5875;no;F;adult;1;1;Naabi-Seronera road [North of Z053]
-Z036;Hy_021;19971028;34.8484;-2.4391;no;M;subadult;1;0.75;near road by lion house
-Z037;Hy_022;19980219;34.892833;-2.617141;no;X;subadult;1;0.5;roadkill 22.3 km Seron->Naabi  Kilimafisi / Simba Kopjes area (22km from Seronera)
-Z039;Hy_023;19980316;34.80967;-2.4405;no;M;adult;1;1;near visitor center
-Z042;Hy_024;19980615;34.93917;-2.711333;yes;F;adult;1;1;south of simba kopjes
-Z085;Hy_025;20000214;34.84133;-2.413667;no;M;subadult;1;1;near river crossing on campsite road (just by Korongo)
-Ccr_305;Hy_026;20000331;34.86579;-2.45848;no;X;subadult;1;0.25; road from SWRC to Wandamu River
-Z102;Hy_027;20000430;34.9697;-2.77018;yes;F;adult;1;1;near simba kopjes
-Z108;Hy_028;20010218;35.07133;-2.870333;no;M;adult;1;1;south of triangle road. main  road in Triangle
-Z109;Hy_029;20010330;34.9903;-2.8156;no;F;adult;1;0.5;just north of Naabi
-Ccr_439;Hy_030;20010420;34.8549;-2.545;no;F;adult;1;1;6.4km south of Downey damn (southern dam on main road)
-Z110;Hy_031;20010425;34.89;-2.5148;no;F;adult;1;0.25;s of Downeys dam
-Z112;Hy_032;20020807;34.78876;-2.45377;yes;M;subadult;1;1;near Hippopool M/P range
-Z115;Hy_033;20030224;34.986968;-2.8082177;no;M;adult;1;0.25;near Naabi -ME: north of Naabi on main road
-Z123;Hy_034;20031029;34.80106;-2.42597;yes;F;subadult;1;1;P/M Hippopool
-Z130;Hy_035;20040315;34.97099;-2.77472;no;F;adult;1;0.75;7 km north of Naabi hill
-Z117;Hy_036;20040530;34.82462;-2.36298;yes;F;adult;1;1;Kubukubu 36m
-Z118;Hy_037;20040825;34.77391;-2.40358;yes;M;subadult;1;1;near Seronera crossing
-Z119;Hy_038;20041220;34.930194;-2.695046;no;M;adult;1;0.95;found 5.3km south of Sopa turnoff at Simba Kopjes
-Z122;Hy_039;20050318;34.80544;-2.40986;yes;M;subadult;1;1;2km north of hippo pool
-Ccr_1261;Hy_040;20050504;34.870379;-2.567223;no;F;adult;1;0.75;16km south of Seronera. ex-CDP roadkill
-Ccr_1184;Hy_041;20050528;35.03883;-2.85593;no;F;adult;1;0.75;5km south of Naabi hill on man road - suspect within Serengeti Npboundary
-Z125;Hy_042;20060504;34.9928;-2.8188;no;M;subadult;1;0.75;Naabi hill at bottom of hill by road on Seronera side
-Z126;Hy_043;20060819;34.71553;-2.30656;yes;F;adult;1;1;western corridor road past turn off to Seronera Lodge in open plain area further down WC road.
-Z128;Hy_044;20060712;34.778502;-2.235352;no;M;adult;1;0.25;towards Ikoma gate
-Z129;Hy_045;20060823;34.765209;-2.223289;no;F;adult;1;0.25;towards Ikoma. no coordinates collected by Christine. CDP
-Z140;Hy_046;20110308;34.83746;-2.34597;yes;F;cub;1;1;main road south of Banagi hill (Naabi gate ?)
-Z141;Hy_047;20110420;34.8107;-2.3997;no;F;adult;1;0.75;about 3.5 kn from northern dam on Seronera
-Z142;Hy_048;20110917;34.8611;-2.4393;no;F;subadult;0.75;0.75;Tawiri staff village
-Z146;Hy_049;20120219;34.8599;-2.5616;no;F;subadult;1;0.25;near simba kopjes
-Z143;Hy_050;20120312;34.817;-2.4363;no;M;subadult;1;0.95;200m from crossroads Seronera junction on road to swrc
-Z144;Hy_051;20120404;34.97547;-2.5457;yes;F;adult;1;1;4km south of Boma Kopje. I range
-Z147;Hy_052;20130212;34.89243;-2.61613;yes;F;adult;1;1;NA
-Z153;Hy_053;20130426;34.82236;-2.47516;yes;X;cub;1;1;about 200m from junction Seronera
-Z154;Hy_054;20130602;34.8201;-2.3828;yes;X;adult;1;1;NA
-Z155;Hy_055;20131209;34.82494;-2.36603;yes;X;subadult;0.75;1;50 from main road to Mugumu
-Z156;Hy_056;20140122;34.92469;-2.6858;yes;F;adult;1;1;simba kopjes
-Z157;Hy_057;20140124;34.70491;-2.50548;yes;F;adult;1;1;Sopa Valley on the way to Soroi 
-Z159;Hy_058;20140417;34.98409;-2.80223;yes;X;adult;1;1;Main road north of Naabi 
-Z160;Hy_059;20150208;34.80485;-2.40979;yes;M;adult;1;1;road from Seronera to Nyaraswiga
-Z162;Hy_060;20150215;34.90774;-2.56523;yes;F;adult;1;1;between Gol Kopje and Maasai Kopje on track to plain
-Z164;Hy_061;20150603;34.84782;-2.53079;yes;F;adult;1;1;main road heading towards Arusha
-Z165;Hy_062;20150616;34.80604;-2.43349;yes;M;adult;1;1;main road
-Z166;Hy_063;20150804;34.8328;-2.50231;yes;M;subadult;1;1;main road heading towards Arusha
-Z171;Hy_064;20160301;34.81353;-2.52474;yes;F;adult;1;1;main road to Moru coming from Seronera River
-Z172;Hy_065;20160520;34.75315;-2.21081;yes;M;subadult;1;1;NA
-Z173;Hy_066;20160528;34.83763;-2.51072;yes;F;adult;1;1;NA
-Z174;Hy_067;20160601;34.8197;-2.43873;yes;F;adult;1;1;NA
-Z175;Hy_068;20160608;34.83759;-2.48671;yes;M;subadult;1;1;N of Moguma hill
-Z176;Hy_069;20160617;34.83732;-2.27885;yes;M;adult;1;1;NA
-Z177;Hy_070;20160624;34.94309;-2.71947;yes;F;adult;1;1;NA
-Z178;Hy_071;20160708;34.8207;-2.4295;no;F;subadult;1;0.95;100m from junction of campsite road and road from SWRC to Seronera - heading towards Seronera on road  precise location possible
-Z179;Hy_072;20160718;34.8141;-2.5163;yes;F;adult;0.75;1;adult female 3 km down road towards Moru K and Sopa lodge from Seronera viewing track 
-Z181;Hy_073;20161216;34.80158;-2.42115;yes;M;subadult;1;1;approximately 80m from Seronera crossing on main road
-Z182;Hy_074;20170107;34.81228;-2.39559;yes;M;adult;1;1;on main road towards Serena lodge/Western corridor
-Z183A;Hy_075;20170712;34.80781;-2.49827;yes;F;adult;1;1;NA
-Z183;Hy_076;20171204;34.95284;-2.73558;yes;M;adult;1;1;main road simba Kopjes
-Z185;Hy_077;20180316;34.82483;-2.48639;yes;F;adult;1;1;NA
-Z186;Hy_078;20180706;34.79251;-2.4108;yes;F;adult;1;1;road towards One Nature Camp
-Z187;Hy_079;20180811;34.79845;-2.42176;yes;X;cub;0.75;1;3m next to road towards One Nature Camp
-P518;Hy_080;20190124;34.85553;-2.54677;yes;F;adult;1;1;NA
-Z188;Hy_081;20190412;34.87321;-2.45566;yes;X;cub;0.75;1;"Observation by Zawadi: dead cub was carried into a thick bush by I849 Cam in Isiaka territory (ca. 350m from Isiaka den) on 20190411 in the afternoon; UTM 36M 0708289 9728428; later cub was eaten probably by I849; infanticide?. lion kill?. road kill?"
-Z189;Hy_082;20190712;34.8133;-2.45135;yes;M;cub;1;1;NA
-Z192;Hy_083;20191115;34.80916;-2.4939;yes;M;adult;1;1;36 M 0701158  9724209 - Seronera area lying on a game drive road leading towards Picnic hill. 
-Z193;Hy_084;20200216;34.90396;-2.47075;yes;F;adult;1;1;40m from the old isiaka den #687
-Z196;Hy_085;20200216;34.90396001;-2.47075001;yes;F;adult;1;1;40m from the old isiaka den #687
-no_name_4;Hy_086;20200711;34.86883;-2.45069;yes;X;cub;1;1;game drive roads close to Moses rock. not too far from the TAWIRI research center
-no_name_5;Hy_087;20211218;34.91243;-2.4777;yes;F;adult;1;1;Sonja found a dead hyena (adult females) on a track in the Isiaka area: UTM 0712648 / 9725988.
-Z201;Hy_088;20211215;34.882288;-2.594284;yes;X;adult;1;1;on main road between Simba Kopjes and Downey's dam: 36M 709276 / 9713096 (estimated coordinates)
-Z202;Hy_089;20220202;34.751169;-2.503303;yes;M;adult;1;1;"Found on road in Sopa valley by SBS [Serengeti Balloon Staff according to Sarah] staff; UTM 36M 0694707 9723178"
-Z203;Hy_090;20220205;34.973404;-2.781327;yes;X;adult;1;1;on main road, ca. 5km N of Naabi Hill: 36M 719377 / 9692394 (estimated coordinates)
-Z204;Hy_091;20220205;34.973404;-2.781327;yes;X;cub;1;1;on main road, ca. 5km N of Naabi Hill: 36M 719377 / 9692394 (estimated coordinates)
-Z205;Hy_092;20220308;34.830417;-2.498077;yes;F;adult;1;1;ca. 500m south of Dawney's dam (36M 0703522 / 9723744),
-Z206;Hy_093;20220315;34.837572;-2.510039;yes;X;adult;1;1;on main road ca. 1km south of Downey's dam hippo pool: 36M 0704316 / 9722420 (estimated coordinates)
-Z206b;Hy_094;20220322;34.839466;-2.513798;yes;X;adult;1;1; lying on the same raod in a similar location (only ca. 500m further south) [same road as Z206]
-Z207;Hy_095;20220404;34.901537;-2.636265;yes;X;adult;1;1;Found on main road ca. 20km south of Downey's dam hippo pool
-Z208;Hy_096;20220423;34.893468;-2.615399;yes;F;adult;1;1;Found on the main road between Seronera and Simba kopjies
-Z209;Hy_097;20220525;34.847499;-2.53005;yes;X;adult;1;1;Found on the main road between Seronera and Simba kopjies, 36M 0705417 / 9720205 
-Z210;Hy_098;20220629;34.976461;-2.78677;yes;X;adult;1;1;Found on the main road between Naabi and Seronera ca. 10-15km beofre Simba kopjies 36 M 719716 9691791 (estimated coordinates)
-Z211;Hy_099;20220811;34.83877;-2.430065;yes;M;cub;1;1;"Found by SM, ca. 6-7 months old; lying on main road not far from DikDik campsite; 36 M 0704462 / 9731264"
-I925;Hy_100;20220925;34.890595;-2.464001;yes;F;subadult;1;1;"Found by Miracle pilot at ca. 5:30am on road ca. 1,3km from current Isiaka den; 36 M 0710221 / 9727503"
-Z213;Hy_101;20221217;34.906793;-2.650806;yes;X;adult;1;1;"Found by SBS pilot at ca. 4:45 am on main road between Seronera and Naabi hill, few km before Simba kopji; 36 M 0711992 / 9706841; when found, a hyena was feeding on the carcass; carcass in advanced stage of decomposition & partly eaten"
-Z214;Hy_102;20221217;34.902079;-2.637268;yes;X;subadult;1;1;"Found by SBS pilot at ca. 11:00 am on main road between Naabi hill and Seronera, several km past Simba kopji; 36 M 0711470 / 9708339 (estimated coordinates)"
-Z215;Hy_103;20230113;35.066415;-2.868089;yes;X;adult;1;1;"Found by Giraffe researchers on main road ca. Half-way between Serengeti entrance gate and Naabu hill; 36M 729704 / 9682780 (estimated coordinates)"
-Z216;Hy_104;20230118;34.977706;-2.789005;yes;X;adult;1;1;"Found by Glasgow Wildebeest researcher on main road between Seronera and Naabi hill, ca. 5km before Naabi hill; 36 M 0719854 / 9691544 (estimated coordinates)"
+﻿ID;date_obs;long;lat;estimated_coordinates;sex;age
+Hy_001;19890212;NA;NA;yes;M;subadult
+Hy_002;19890326;NA;NA;NA;F;adult
+Hy_003;19921224;NA;NA;NA;NA;unknown
+Hy_004;19930306;NA;NA;yes;M;unknown
+Hy_005;19930308;34.90033;-2.634167;yes;M;subadult
+Hy_006;19930314;NA;NA;NA;NA;unknown
+Hy_007;19930402;NA;NA;NA;NA;unknown
+Hy_008;19930626;NA;NA;yes;NA;adult
+Hy_009;19930717;NA;NA;NA;NA;unknown
+Hy_010;19930719;NA;NA;NA;NA;unknown
+Hy_011;19930826;34.81;-2.387333;yes;NA;adult
+Hy_012;19930927;NA;NA;NA;NA;unknown
+Hy_013;19931018;34.77634;-2.708961;yes;F;adult
+Hy_014;19940109; 34.90433;-2.6525;yes;F;adult
+Hy_015;19940506;34.85433;-2.482333;yes;F;adult
+Hy_016;19941031;34.8218;-2.4349;yes;F;adult
+Hy_017;19950228;34.8833333;-2.596667;yes;M;adult
+Hy_018;19950403;34.9975;-2.832167;yes;F;adult
+Hy_019;19950415;34.84374;-2.33158;yes;NA;adult
+Hy_020;19960310;34.87933;-2.5875;yes;F;adult
+Hy_021;19971028;34.8484;-2.4391;yes;M;subadult
+Hy_022;19980219;NA;NA;yes;NA;subadult
+Hy_023;19980316;34.80967;-2.4405;yes;M;adult
+Hy_024;19980615;34.93917;-2.711333;no;F;adult
+Hy_025;20000214;34.84133;-2.413667;yes;M;subadult
+Hy_026;20000331;NA;NA;yes;NA;subadult
+Hy_027;20000430;34.9697;-2.77018;no;F;adult
+Hy_028;20010218;35.07133;-2.870333;yes;M;adult
+Hy_029;20010330;NA;NA;yes;F;adult
+Hy_030;20010420;34.8549;-2.545;yes;F;adult
+Hy_031;20010425;NA;NA;yes;F;adult
+Hy_032;20020807;34.78876;-2.45377;no;M;subadult
+Hy_033;20030224;NA;NA;yes;M;adult
+Hy_034;20031029;34.80106;-2.42597;no;F;subadult
+Hy_035;20040315;34.97099;-2.77472;yes;F;adult
+Hy_036;20040530;34.82462;-2.36298;no;F;adult
+Hy_037;20040825;34.77391;-2.40358;no;M;subadult
+Hy_038;20041220;34.930194;-2.695046;yes;M;adult
+Hy_039;20050318;34.80544;-2.40986;no;M;subadult
+Hy_040;20050504;34.870379;-2.567223;yes;F;adult
+Hy_041;20050528;35.03883;-2.85593;yes;F;adult
+Hy_042;20060504;34.9928;-2.8188;yes;M;subadult
+Hy_043;20060819;34.71553;-2.30656;no;F;adult
+Hy_044;20060712;NA;NA;yes;M;adult
+Hy_045;20060823;NA;NA;yes;F;adult
+Hy_046;20110308;34.83746;-2.34597;no;F;cub
+Hy_047;20110420;34.8107;-2.3997;yes;F;adult
+Hy_048;20110917;34.8611;-2.4393;yes;F;subadult
+Hy_049;20120219;NA;NA;yes;F;subadult
+Hy_050;20120312;34.817;-2.4363;yes;M;subadult
+Hy_051;20120404;34.97547;-2.5457;no;F;adult
+Hy_052;20130212;34.89243;-2.61613;no;F;adult
+Hy_053;20130426;34.82236;-2.47516;no;NA;cub
+Hy_054;20130602;34.8201;-2.3828;no;NA;adult
+Hy_055;20131209;34.82494;-2.36603;no;NA;subadult
+Hy_056;20140122;34.92469;-2.6858;no;F;adult
+Hy_057;20140124;34.70491;-2.50548;no;F;adult
+Hy_058;20140417;34.98409;-2.80223;no;NA;adult
+Hy_059;20150208;34.80485;-2.40979;no;M;adult
+Hy_060;20150215;34.90774;-2.56523;no;F;adult
+Hy_061;20150603;34.84782;-2.53079;no;F;adult
+Hy_062;20150616;34.80604;-2.43349;no;M;adult
+Hy_063;20150804;34.8328;-2.50231;no;M;subadult
+Hy_064;20160301;34.81353;-2.52474;no;F;adult
+Hy_065;20160520;34.75315;-2.21081;no;M;subadult
+Hy_066;20160528;34.83763;-2.51072;no;F;adult
+Hy_067;20160601;34.8197;-2.43873;no;F;adult
+Hy_068;20160608;34.83759;-2.48671;no;M;subadult
+Hy_069;20160617;34.83732;-2.27885;no;M;adult
+Hy_070;20160624;34.94309;-2.71947;no;F;adult
+Hy_071;20160708;34.8207;-2.4295;yes;F;subadult
+Hy_072;20160718;34.8141;-2.5163;no;F;adult
+Hy_073;20161216;34.80158;-2.42115;no;M;subadult
+Hy_074;20170107;34.81228;-2.39559;no;M;adult
+Hy_075;20170712;34.80781;-2.49827;no;F;adult
+Hy_076;20171204;34.95284;-2.73558;no;M;adult
+Hy_077;20180316;34.82483;-2.48639;no;F;adult
+Hy_078;20180706;34.79251;-2.4108;no;F;adult
+Hy_079;20180811;34.79845;-2.42176;no;NA;cub
+Hy_080;20190124;34.85553;-2.54677;no;F;adult
+Hy_081;20190412;34.87321;-2.45566;no;NA;cub
+Hy_082;20190712;34.8133;-2.45135;no;M;cub
+Hy_083;20191115;34.80916;-2.4939;no;M;adult
+Hy_084;20200216;34.90396;-2.47075;no;F;adult
+Hy_085;20200216;34.903961;-2.47075001;no;F;adult
+Hy_086;20200711;34.86883;-2.45069;no;NA;cub
+Hy_087;20211218;34.91243;-2.4777;no;F;adult
+Hy_088;20211215;34.882288;-2.594284;no;NA;adult
+Hy_089;20220202;34.751169;-2.503303;no;M;adult
+Hy_090;20220205;34.973404;-2.781327;no;NA;adult
+Hy_091;20220205;34.973404;-2.781327;no;NA;cub
+Hy_092;20220308;34.830417;-2.498077;no;F;adult
+Hy_093;20220315;34.837572;-2.510039;no;NA;adult
+Hy_094;20220322;34.839466;-2.513798;no;NA;adult
+Hy_095;20220404;34.901537;-2.636265;no;NA;adult
+Hy_096;20220423;34.893468;-2.615399;no;F;adult
+Hy_097;20220525;34.847499;-2.53005;no;NA;adult
+Hy_098;20220629;34.976461;-2.78677;no;NA;adult
+Hy_099;20220811;34.83877;-2.430065;no;M;cub
+Hy_100;20220925;34.890595;-2.464001;no;F;subadult
+Hy_101;20221217;34.906793;-2.650806;no;NA;adult
+Hy_102;20221217;34.902079;-2.637268;no;NA;subadult
+Hy_103;20230113;35.066415;-2.868089;no;NA;adult
+Hy_104;20230118;34.977706;-2.789005;no;NA;adult

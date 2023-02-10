@@ -11,11 +11,9 @@ Sys.setenv(LANG = "en")
 
 # Proportion of each age class in the study population (calculated from the three
 # study clans over the whole study period)
-proportion <- c(0.3620253, 0.2988674, 0.1320453, 0.2070620)
-names(proportions) <- c("Adult females", "Adult males", "Subadults", "Cubs")
 
-proportions_1 <- c(0.6608927, 0.1320453, 0.2070620)    
-names(proportions_1) <- c("Adults", "Subadults", "Cubs")*
+proportions <- c(0.6608927, 0.1320453, 0.2070620)    
+names(proportions) <- c("Adults", "Subadults", "Cubs")
 
 # ~ 2. Count roadkills of each age class --------------------------------------
 
@@ -29,10 +27,6 @@ hy_carcasses <- read_delim("data/01_hy_carcasses.csv",
   nb.sub <- as.numeric(counts[7,3] + counts[8,3] + counts[9,3])
   nb.cub <- as.numeric(counts[4,3] + counts[5,3] + counts[6,3])
   nb.unkn <- as.numeric(counts[10,3] + counts[11,3])
-
-  obs <- c(nb.ad.F, nb.ad.M, nb.sub, nb.cub) # adult males and adult females in separate categories
-  obs1 <- c(nb.ad, nb.sub, nb.cub)
-  obs2 <- c(nb.ad + nb.unkn, nb.sub, nb.cub) # unknown age considered as adults.
 }
 
 
@@ -41,14 +35,14 @@ hy_carcasses <- read_delim("data/01_hy_carcasses.csv",
 # Adults and subadults VS cubs (without unknowns as adults)
 dbinom(x =  nb.ad + nb.sub,
        size = nb.ad + nb.sub + nb.cub,
-       prob = proportions_1[1] + proportions_1[2])
+       prob = proportions[1] + proportions[2])
 # p < 0.01 (0.0026)
 nb.ad + nb.sub + nb.cub
 
 # (with unknwons as adults)
 dbinom(x = nb.ad + nb.sub + nb.unkn,
        size = nb.ad + nb.sub + nb.cub + nb.unkn,
-       prob = proportions_1[1] + proportions_1[2])
+       prob = proportions[1] + proportions[2])
 # p = 0.001
 nb.ad + nb.sub + nb.cub + nb.unkn
 
@@ -105,19 +99,10 @@ hy_carcasses_clan_members <- read_delim("data/02_hy_carcasses_clan_members.csv",
 
 hy_carcasses_clan_members <- hy_carcasses_clan_members %>%
   filter(sex == "F",
-         age_category %in% c("adult", "subadult")) %>%
-  arrange(standardized_rank) # Order in ascending ranks
+         age_category %in% c("adult", "subadult")) # remove cubs
 
 
-hy_carcasses_clan_members_ad <- hy_carcasses_clan_members %>%
-  filter(age_category == "adult")
-
-# Statistical tests ----------------------------
+# ~ Statistical tests ----------------------------
 
 wilcox.test(hy_carcasses_clan_members$standardized_rank, mu = 0, exact = TRUE)
-# p = 0.023
 nrow(hy_carcasses_clan_members)
-
-wilcox.test(hy_carcasses_clan_members_ad$standardized_rank, mu = 0, exact = TRUE)
-# p = 0.015
-nrow(hy_carcasses_clan_members_ad)

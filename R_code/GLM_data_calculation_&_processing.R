@@ -96,7 +96,7 @@ roads_segmented_cropped_no_short_df <- read_csv("data/GLM/roads_segmented_croppe
 # Import the file with the coordinates of the carcasses
 hy_carcasses_with_GPS <- read_delim("data/01_hy_carcasses.csv",
                                              ";", escape_double = FALSE, trim_ws = TRUE) %>%
-  filter(location_certainty_score >= 0.75)
+  filter(!is.na(long))
 
 start <- Sys.time()
 closest_segment <- GetClosestRoadSegment(carcasses.df = hy_carcasses_with_GPS, # ~1min
@@ -181,11 +181,10 @@ write_csv(table_glm_7, "data/GLM/table_glm_7.csv")
 
 table_glm_7 <- read_csv("data/GLM/table_glm_7.csv")
 
-# The land cover file is too heavy for GitHub. It is available on requiest from 
-# the main author from the original study: https://doi.org/10.1111/j.1365-2699.2008.02017.x
+# The land cover file is too heavy for GitHub. It is available on request from 
+# the main author of the original study: https://doi.org/10.1111/j.1365-2699.2008.02017.x
+
 land_cover <- raster("data/spatial/serengeti_land_cover_Reed_2009.tif")
-
-
 
 # ~ 1. Crop the land cover data to reduce the computational burden -------------
 
@@ -323,7 +322,8 @@ table_glm_10 <- read_csv("data/GLM/table_glm_10.csv")
 # ~ 1. Response variable -------------------------------------------------------
 
 ggplot(table_glm_10, aes(x = nbr_carcasses)) +
-  geom_histogram()
+  geom_histogram() +
+  theme_bw()
 
 
 # ~ 2. Covariates --------------------------------------------------------------
@@ -358,7 +358,8 @@ VS_amenity + VS_water + VS_woodland
 # ~~~ b. Distance to amenities -------------------------------------------------
 
 ggplot(table_glm_9, aes(x = distance_amenity_km)) +
-  geom_histogram()
+  geom_histogram() +
+  theme_bw()
 
 distance_amenity <- ggplot(roads_segmented_df_covariates,
        aes(x = long, y = lat, group = ID_road_seg, color = distance_amenity_km)) +
@@ -370,7 +371,8 @@ distance_amenity <- ggplot(roads_segmented_df_covariates,
 # ~~~ c. Distance to water -----------------------------------------------------
 
 ggplot(table_glm_9, aes(x = distance_water_km)) +
-  geom_histogram()
+  geom_histogram() +
+  theme_bw()
 
 distance_water <- ggplot(roads_segmented_df_covariates,
        aes(x = long, y = lat, group = ID_road_seg, color = distance_water_km)) +
@@ -382,7 +384,8 @@ distance_water <- ggplot(roads_segmented_df_covariates,
 # ~~~ d. Woodland cover --------------------------------------------------------
 
 ggplot(table_glm_9, aes(x = woodland)) +
-  geom_histogram()
+  geom_histogram() +
+  theme_bw()
 
 woodland <- ggplot(roads_segmented_df_covariates,
        aes(x = long, y = lat, group = ID_road_seg, color = woodland)) +
@@ -391,26 +394,10 @@ woodland <- ggplot(roads_segmented_df_covariates,
   viridis::scale_color_viridis() +
   labs(color = "Woodland cover")
 
-
+# +++++++++++++++++++++++++++++++++
 library(patchwork)
 distance_amenity + distance_water + woodland &
   theme(legend.position = "bottom")
-
-ggplot(table_glm_9, aes(x = road_importance, y = grassland)) +
-  geom_boxplot()
-
-wilcox.test(formula = grassland ~ road_importance, data = table_glm_9, alternative = "two.sided", exact = TRUE)
-
-ggplot(table_glm_9, aes(x = road_importance, y = woodland)) +
-  geom_boxplot()
-
-wilcox.test(formula = woodland ~ road_importance, data = table_glm_9, alternative = "two.sided", exact = TRUE)
-
-ggplot(table_glm_9, aes(x = lat_midpoint, y = woodland)) +
-  geom_point()
-
-
-
 
 
 

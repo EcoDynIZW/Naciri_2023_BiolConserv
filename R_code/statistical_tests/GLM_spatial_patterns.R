@@ -75,13 +75,6 @@ moran.test(moran_resids_df$resids, mycoord.lw)
 
 # ~ 3. Deviance explained ------------------------------------------------------
 
-data_glm <- table_glm
-
-glm_nb <- glm.nb(formula = y ~ RoadType + DistanceAmenity
-                 + DistanceWater + Woodland,
-                 data = data_glm,
-                 link = log)
-
 car::Anova(glm_nb, type = "III")
 
 
