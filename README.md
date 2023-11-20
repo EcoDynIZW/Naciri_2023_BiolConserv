@@ -1,4 +1,4 @@
-# Naciri et al. (2023) *Ecology and Evolution*
+# Naciri et al. (2023) *Biological Conservation*
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7628828.svg)](https://doi.org/10.5281/zenodo.7628828)
 
 > Marwan Naciri, **Aimara Planillo**, **Morgane Gicquel**, **Marion L. East**, **Heribert Hofer**, **Sonja Metzger** & **Sarah Benhaiem** (2023):
